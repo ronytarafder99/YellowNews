@@ -48,13 +48,8 @@
         'fields'     => array(
             array(
                 'id'       => 'logo',
-                'title'    => __('selection'),
+                'title'    => __('Main Logo'),
                 'type'     => 'media',
-            ),
-            array(
-                'id'     => 'alt',
-                'title'    => __('alt for logo'),
-                'type'   => 'text',
             ),
             array(
                 'id'     => 'width',
@@ -72,13 +67,6 @@
                 'placeholder' => 'defult is 95',
                 'default'  => '95',
             ),
-            array(
-                'id'       => 'site_content',
-                'type'     => 'switch',
-                'title'    => __('Show Time in Bangla/Eng', 'WeSoftPress'),
-                'subtitle' => __('on means bangla!', 'WeSoftPress'),
-                'default'  => true,
-            ),
         )
     ));
     
@@ -90,42 +78,39 @@
         'icon'  => 'el el-list-alt',
         'fields'           => array(
             array(
-                'id'       => 'live_tv',
+                'id'       => 'facebook-link',
                 'type'     => 'text',
-                'title'    => __('Tv link', 'WeSoftPress'),
-                'subtitle' => __('Enter Full ID Link', 'WeSoftPress'),
-                'default'  => 'videogallery',
-            ),
-            array(
-                'id'       => 'facebook',
-                'type'     => 'text',
-                'title'    => __('Facebook ID link', 'WeSoftPress'),
-                'subtitle' => __('Enter Full ID Link', 'WeSoftPress'),
-                'desc'     => __('Demo: https://www.facebook.com/ronytarafder99', 'WeSoftPress'),
+                'title'    => __('Facebook Account link', 'WeSoftPress'),
                 'default'  => '#',
             ),
             array(
-                'id'       => 'twitter',
+                'id'       => 'twitter-link',
                 'type'     => 'text',
                 'title'    => __('Twitter ID link', 'WeSoftPress'),
-                'subtitle' => __('Enter Full ID Link', 'WeSoftPress'),
-                'desc'     => __('Demo: https://twitter.com/rony_tarafder99', 'WeSoftPress'),
                 'default'  => '#',
             ),
             array(
-                'id'       => 'Youtube',
+                'id'       => 'linkedin-link',
+                'type'     => 'text',
+                'title'    => __('Linkedin ID link', 'WeSoftPress'),
+                'default'  => '#',
+            ),
+            array(
+                'id'       => 'Youtube-link',
                 'type'     => 'text',
                 'title'    => __('Youtube Channel link', 'WeSoftPress'),
-                'subtitle' => __('Enter Full Channel Link', 'WeSoftPress'),
-                'desc'     => __('Demo: https://twitter.com/rony_tarafder99', 'WeSoftPress'),
                 'default'  => '#',
             ),
             array(
-                'id'       => 'rss',
+                'id'       => 'instagram-link',
+                'type'     => 'text',
+                'title'    => __('Instagram Channel link', 'WeSoftPress'),
+                'default'  => '#',
+            ),
+            array(
+                'id'       => 'rss-link',
                 'type'     => 'text',
                 'title'    => __('RSS link', 'WeSoftPress'),
-                'subtitle' => __('Enter Full Link', 'WeSoftPress'),
-                'desc'     => __('Demo: https://twitter.com/rony_tarafder99', 'WeSoftPress'),
                 'default'  => '#',
             )
         )
@@ -139,244 +124,11 @@
         'icon'   => 'el el-list-alt',
         'fields' => array(
             array(
-                'id'       => 'marguee_name',
-                'type'     => 'text',
-                'title'    => __('Marquee Heading', 'WeSoftPress'),
-                'subtitle' => __('Enter Text', 'WeSoftPress'),
-                'desc'     => __('Demo: শিরোনাম:', 'WeSoftPress'),
-                'default'  => 'শিরোনাম:',
-            ),
-            array(
-                'id'       => 'marquee_cat',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Select category for Marquee', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'eye_catching_cat',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Select category Above heading', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'dont_miss_cat',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Select category Above heading', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'hit_list_cat',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Select category Above heading', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'home_cat_1',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Home Page Cat One', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'home_cat_2',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Home Page Cat Two', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'home_cat_3',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Home Page Cat Three', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'home_cat_4',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Home Page Cat four', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'new_times_blog_cat',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Select category Above heading', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'photo_name',
-                'type'     => 'text',
-                'title'    => __('Heading Text photo Slider', 'WeSoftPress'),
-                'subtitle' => __('Enter Text', 'WeSoftPress'),
-                'desc'     => __('Demo: ফটো গ্যালারি', 'WeSoftPress'),
-                'default'  => 'ফটো গ্যালারি',
-            ),
-            array(
-                'id'       => 'video_name',
-                'type'     => 'text',
-                'title'    => __('Heading Text Video Grid', 'WeSoftPress'),
-                'subtitle' => __('Enter Text', 'WeSoftPress'),
-                'desc'     => __('Demo: ভিডিও গ্যালারি', 'WeSoftPress'),
-                'default'  => 'ভিডিও গ্যালারি',
-            ),
-            array(
-                'id'       => 'home_sidebar_cat1',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Home Sidebar Cat one', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'home_sidebar_cat2',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Home Sidebar Cat two', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'home_sidebar_cat3',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Home Sidebar Cat three', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'home_sidebar_cat4',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Home Sidebar Cat four', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'home_sidebar_cat5',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Home Sidebar Cat five', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'home_sidebar_cat6',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Home Sidebar Cat six', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'home_sidebar_cat7',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Home Sidebar Cat siven', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'home_sidebar_cat8',
-                'type'     => 'select',
-                'data'     => 'categories',
-                'title'    => __('Home Sidebar Cat eight', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
-                'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
-            ),
-            array(
-                'id'       => 'home_sidebar_cat9',
+                'id'       => 'post_cat_one',
                 'type'     => 'select',
                 'data'     => 'categories',
                 'title'    => __('Home Sidebar Cat nine', 'WeSoftPress'),
-                'subtitle' => __('please select your category', 'WeSoftPress'),
                 'default'  => '1',
-                'args'     => array(
-                    'hide_empty'         => 0,
-                    'option_none_value' => 1,
-                )
             ),
         )
     ));
@@ -409,7 +161,8 @@
                 'font-size'   => true,
                 'output' => ('body'),
                 'default'  => array(
-                    'font-family' => 'SolaimanLipi',
+                    'font-family' => 'Roboto',
+                    'line-height' => '27px',
                     'font-size'   => '16px',
                 ),
             ),
@@ -509,46 +262,28 @@
         'icon'  => 'el el-list-alt',
         'fields'     => array(
             array(
-                'id'       => 'home_page_bottom_ad1',
+                'id'       => 'header_ad',
                 'type'     => 'editor',
-                'title'    => __('Home Page Bottom Ads', 'WeSoftPress'),
-                'subtitle' => __('home page full width banner', 'WeSoftPress'),
+                'title'    => __('Ads In The Header', 'WeSoftPress'),
+                'subtitle' => __('This ad will show in Sidebar', 'WeSoftPress'),
             ),
             array(
-                'id'       => 'home_page_left_ad1',
+                'id'       => 'archive_ad_one',
                 'type'     => 'editor',
-                'title'    => __('Banner Ad in the Home left Part', 'WeSoftPress'),
-                'subtitle' => __('This ad will show in the home left', 'WeSoftPress'),
+                'title'    => __('Ads In The Sidebar', 'WeSoftPress'),
+                'subtitle' => __('This ad will show in Sidebar', 'WeSoftPress'),
             ),
             array(
-                'id'       => 'home_page_left_ad2',
+                'id'       => 'archive_ad_two',
                 'type'     => 'editor',
-                'title'    => __('Banner Ad in the Home left Part', 'WeSoftPress'),
-                'subtitle' => __('This ad will show in the home left', 'WeSoftPress'),
+                'title'    => __('Ads In The Sidebar', 'WeSoftPress'),
+                'subtitle' => __('This ad will show in Sidebar', 'WeSoftPress'),
             ),
             array(
-                'id'       => 'home_page_left_ad3',
+                'id'       => 'archive_ad_three',
                 'type'     => 'editor',
-                'title'    => __('Banner Ad in the Home left Part', 'WeSoftPress'),
-                'subtitle' => __('This ad will show in the home left', 'WeSoftPress'),
-            ),
-            array(
-                'id'       => 'home_page_right_ad1',
-                'type'     => 'editor',
-                'title'    => __('Thumb Ad in the Home right Part', 'WeSoftPress'),
-                'subtitle' => __('This ad will show in the home right', 'WeSoftPress'),
-            ),
-            array(
-                'id'       => 'home_page_right_ad2',
-                'type'     => 'editor',
-                'title'    => __('Thumb Ad in the Home right Part', 'WeSoftPress'),
-                'subtitle' => __('This ad will show in the home right', 'WeSoftPress'),
-            ),
-            array(
-                'id'       => 'archive_ads',
-                'type'     => 'editor',
-                'title'    => __('Ads In The  Archive Page', 'WeSoftPress'),
-                'subtitle' => __('This ad will show in Archive page top', 'WeSoftPress'),
+                'title'    => __('Ads In The Sidebar', 'WeSoftPress'),
+                'subtitle' => __('This ad will show in Sidebar', 'WeSoftPress'),
             ),
         )
     ));

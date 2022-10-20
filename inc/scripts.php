@@ -32,16 +32,12 @@ if ( !function_exists('wesoftpress_scripts') ) :
             PLUGINS
         -----------------------------*/
         wp_enqueue_style('main-css', WESOFTPRESS_ROOT_CSS . '/main.css');
-        wp_enqueue_style('bootstarp', WESOFTPRESS_ROOT_CSS . '/bootstrap.css');
-        wp_enqueue_style('fonts', WESOFTPRESS_ROOT_CSS . '/fonts.css');
-        wp_enqueue_style('normalize', WESOFTPRESS_ROOT_CSS . '/normalize.css');
-        wp_enqueue_style('lightbox_css', WESOFTPRESS_ROOT_CSS . '/jquery.lightbox.css');
-        wp_enqueue_style('flex_slider_style', WESOFTPRESS_ROOT_CSS . '/flexslider.css');
+        wp_enqueue_style('fonts-css', WESOFTPRESS_ROOT_CSS . '/fonts.css');
 
         /*----------------------------
             FONT AWSOME
         -----------------------------*/
-        wp_enqueue_style('font-awesome', WESOFTPRESS_ROOT_CSS . '/fontawesome.css');
+        // wp_enqueue_style('font-awesome', WESOFTPRESS_ROOT_CSS . '/fontawesome.css');
 
         /*----------------------------
             MAIN STYLESHEET

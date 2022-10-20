@@ -40,40 +40,19 @@ if (file_exists( WESOFTPRESS_ROOT .'/inc/custom-functions.php' )) {
 	require_once( WESOFTPRESS_ROOT .'/inc/custom-functions.php' );
 }
 
-if ( ! function_exists( 'newtime_pro_plan' ) ) {
-    function newtime_pro_plan() {
-        global $newtime_pro_plan;
-        if ( ! isset( $newtime_pro_plan ) ) {
-            require_once dirname(__FILE__) . '/wordpress-sdk/start.php';
-            $newtime_pro_plan = fs_dynamic_init( array(
-                'id'                  => '10129',
-                'slug'                => 'newtime',
-                'premium_slug'        => 'newtime-premium-plan',
-                'type'                => 'theme',
-                'public_key'          => 'pk_b41b0ac2660480002b28c4d1300cb',
-                'is_premium'          => true,
-                'is_premium_only'     => true,
-                'has_addons'          => false,
-                'has_paid_plans'      => true,
-                'menu'                => array(
-					'slug'           => 'newtime',
-					'support'	      => true,
-                    'first-path'	  => 'themes.php',
-                ),
-            ) );
-        }
-        return $newtime_pro_plan;
-    }
-    newtime_pro_plan();
-    do_action( 'newtime_pro_plan_loaded' );
-}
 
-if ( newtime_pro_plan()->is__premium_only() ) {
-	if ( newtime_pro_plan()->can_use_premium_code() ) {
-		require_once('inc/Options.php'); 
-	}
-}
 
+require_once('inc/Options.php'); 
+
+add_filter('next_posts_link_attributes', 'add_next_posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'add_previous_posts_link_attributes');
+
+function add_next_posts_link_attributes() {
+  return 'class="blog-pager-older-link-mobile"';
+}
+function add_previous_posts_link_attributes() {
+  return 'class="blog-pager-newer-link-mobile"';
+}
 
 /*--------------------------------------
 	PHOTO GALLERY .
