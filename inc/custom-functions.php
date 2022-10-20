@@ -7,16 +7,17 @@ if ( ! function_exists( 'custom_length_excerpt' ) ) :
     }
 endif;
 
-// the_post_thumbnail
-if ( ! function_exists( 'custom_post_thumbnail' ) ) :
-    function custom_post_thumbnail() {
-        if (has_post_thumbnail()) {
-            the_post_thumbnail('custom-size');
-        } else { 
-            echo '<img src="'.WESOFTPRESS_ROOT_IMG.'/default-img_final.gif" alt="Failed to img load" />';
-            }
-        }
-endif;
+
+// Add class to pagination
+add_filter('next_posts_link_attributes', 'add_next_posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'add_previous_posts_link_attributes');
+
+function add_next_posts_link_attributes() {
+  return 'class="blog-pager-older-link-mobile"';
+}
+function add_previous_posts_link_attributes() {
+  return 'class="blog-pager-newer-link-mobile"';
+}
 
 // Popular Posts
 if ( ! function_exists( 'shapeSpace_popular_posts' ) ) :

@@ -26,8 +26,8 @@
                             class='icon-font icon-twitter'>&#61593;</i></a>
                     <a href="<?php echo $wesoftpress['linkedin-link'] ?>" rel='noopener' target='_blank'><i
                             class='icon-font icon-linkedin'>&#61665;</i></a>
-                    <a href="<?php echo $wesoftpress['Youtube-link'] ?>" rel='noopener'
-                        target='_blank'><i class='icon-font icon-youtube'>&#61799;</i></a>
+                    <a href="<?php echo $wesoftpress['Youtube-link'] ?>" rel='noopener' target='_blank'><i
+                            class='icon-font icon-youtube'>&#61799;</i></a>
                     <a href="<?php echo $wesoftpress['rss-link'] ?>" rel='noopener' target='_blank'><i
                             class='icon-font icon-rss'>&#61598;</i></a></span>
             </div>
@@ -35,7 +35,12 @@
         <div class='logo-area cf'>
             <div class='logo-box'>
                 <a href="<?php bloginfo('url'); ?>">
-                    <img alt='Site Logo' src="<?php echo $wesoftpress['logo']['url']; ?>" />
+                <?php if($wesoftpress['logo']['url']){
+                    echo '<img width="'.$wesoftpress['logo-width'].'" height="'.$wesoftpress['logo-height'].'" alt="Site Logo" src="'.$wesoftpress['logo']['url'].'" />';
+                }else{
+                    bloginfo('name');
+                }; ?>
+                    
                 </a>
             </div>
             <div class='m-button m-menu-more'><a aria-label='open menu' class='btn-open' href='javascript:void(0)'><i
@@ -51,7 +56,7 @@
             <ul class='cf m-menu-ul'>
                 <li><a href="<?php bloginfo('url'); ?>"><i class='icon-font icon-home'>&#59393;</i> Home</a></li>
                 <li><a href='#email-outer'><i class='icon-font icon-mail-alt'>&#61664;</i> Newsletter</a></li>
-                <li><a href='https://deals.thehackernews.com' rel='noopener' target='_blank'><i
+                <li><a href="<?php echo $wesoftpress['deal-link'] ?>" rel='noopener' target='_blank'><i
                             class='icon-font icon-basket'>&#59397;</i> Offers</a></li>
             </ul>
         </div>
@@ -66,14 +71,14 @@
                         target='_blank'>Offers</a></li>
                 <li class='show-menu'><a href='/p/submit-news.html'>Contact</a></li> -->
                 <?php $header_menu = 'header_menu';
-                        if (has_nav_menu($header_menu)) {
-                            wp_nav_menu(array(
-                                'theme_location' => 'header_menu',
-                                'container'       => false,
-                                'items_wrap' => '%3$s',
-                                'depth'           => 1,
-                            ));
-                        }; ?>
+                if (has_nav_menu($header_menu)) {
+                    wp_nav_menu(array(
+                        'theme_location' => 'header_menu',
+                        'container'       => false,
+                        'items_wrap' => '%3$s',
+                        'depth'           => 1,
+                    ));
+                }; ?>
             </ul>
             <div class='button menu-more'>
                 <a class='btn-open' href='javascript:void(0)'><i class='icon-font icon-menu'>&#61641;</i></a></div>
@@ -96,29 +101,36 @@
                 <div class='o-menu-left'>
                     <div class='o-menu-h5'>Resources</div>
                     <ul class='o-menu'>
-                        <li><a href='https://deals.thehackernews.com' rel='noopener' target='_blank'>THN Store</a></li>
-                        <li><a href='https://thehackernews.tradepub.com' rel='noopener' target='_blank'>Free eBooks</a>
-                        </li>
-                        <li><a href='https://deals.thehackernews.com/free' rel='noopener' target='_blank'>Freebies</a>
-                        </li>
-                        <li><a href='https://feeds.feedburner.com/TheHackersNews' rel='noopener' target='_blank'>RSS
-                                Feeds</a></li>
+                    <?php $header_resources_menu = 'header_resources_menu';
+                        if (has_nav_menu($header_resources_menu)) {
+                            wp_nav_menu(array(
+                                'theme_location' => 'header_resources_menu',
+                                'container'       => false,
+                                'items_wrap' => '%3$s',
+                                'depth'           => 1,
+                            ));
+                        }; ?>
                     </ul>
                 </div>
                 <div class='o-menu-right'>
                     <div class='o-menu-h5'>About Site</div>
                     <ul class='o-menu'>
-                        <li><a href='/p/about-us.html'>About Us</a></li>
-                        <li><a href='/p/authors.html'>Our Team</a></li>
-                        <li><a href='/p/careers-technical-writer-designer-and.html'>Jobs</a></li>
-                        <li><a href='/p/advertising-with-hacker-news.html'>Advertise With Us</a></li>
+                    <?php $header_about_menu = 'header_about_menu';
+                        if (has_nav_menu($header_about_menu)) {
+                            wp_nav_menu(array(
+                                'theme_location' => 'header_about_menu',
+                                'container'       => false,
+                                'items_wrap' => '%3$s',
+                                'depth'           => 1,
+                            ));
+                        }; ?>
                     </ul>
                 </div>
             </nav>
             <div class='gap'></div>
             <div class='o-h5'>Contact/Tip Us</div>
             <div class='o-contact'>
-                <a href='/p/submit-news.html'>
+                <a href="<?php echo $wesoftpress['contact-link'] ?>">
                     <div class='o-contact-icon'><i class='icon-font icon-mail-alt'>&#61664;</i></div>
                     <span>Reach out to get featured&#8212;contact us to send your exclusive story idea, research, hacks,
                         or ask us a question or leave a comment/feedback!</span>
@@ -139,18 +151,18 @@
                         class='icon-font icon-instagram'>&#61805;</i></a>
             </div>
             <div class='o-sub cf'>
-                <a href='https://feeds.feedburner.com/TheHackersNews' rel='noopener' target='_blank'><i
+                <a href="<?php echo $wesoftpress['rss-link'] ?>" rel='noopener' target='_blank'><i
                         class='icon-font icon-rss'>&#61598;</i> RSS Feeds</a>
                 <a href='#email-outer'><i class='icon-font icon-bell-alt'>&#61683;</i> Email Alerts</a>
-                <a href='https://t.me/joinchat/AAAAADwuDObFWF60CiR-HQ' rel='noopener' target='_blank'><i
+                <a href="<?php echo $wesoftpress['telegram-link'] ?>" rel='noopener' target='_blank'><i
                         class='icon-font icon-telegram'>&#62150;</i> Telegram Channel</a>
             </div>
         </div>
     </aside>
     <div class='advertisements'>
 
-    <?php if($wesoftpress['header_ad']){
+        <?php if($wesoftpress['header_ad']){
         echo '<center class="cf">'.$wesoftpress['header_ad'].'</center>';
     }; ?>
-        
+
     </div>

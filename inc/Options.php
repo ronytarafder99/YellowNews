@@ -36,47 +36,22 @@
     Redux::setArgs( $opt_name, $args );
 
     Redux::setSection($opt_name, array(
-        'title' => __('header Settings', 'WeSoftPress'),
-        'id'    => 'header',
-        'icon'  => 'el el-list-alt',
-    ));
-    Redux::setSection($opt_name, array(
-        'title' => __('Logo Settings'),
-        'id'    => 'header-logo_setting',
-        'icon'  => 'el el-list-alt',
-        'subsection'       => true,
-        'fields'     => array(
-            array(
-                'id'       => 'logo',
-                'title'    => __('Main Logo'),
-                'type'     => 'media',
-            ),
-            array(
-                'id'     => 'width',
-                'title'    => __('width for logo'),
-                'type'   => 'text',
-                'desc'     => __('max width is 550', 'WeSoftPress'),
-                'placeholder' => 'defult is 450',
-                'default'  => '450',
-            ),
-            array(
-                'id'     => 'height',
-                'title'    => __('height for logo'),
-                'type'   => 'text',
-                'desc'     => __('max height is 100', 'WeSoftPress'),
-                'placeholder' => 'defult is 95',
-                'default'  => '95',
-            ),
-        )
-    ));
-    
-    Redux::setSection($opt_name, array(
-        'title'            => __('Social Links', 'WeSoftPress'),
-        'desc'             => __('Please fill all the social links here ', 'WeSoftPress'),
-        'id'               => 'header-social_links',
-        'subsection'       => true,
+        'title' => __('Global Settings', 'WeSoftPress'),
+        'id'    => 'global-setting',
         'icon'  => 'el el-list-alt',
         'fields'           => array(
+            array(
+                'id'       => 'deal-link',
+                'type'     => 'text',
+                'title'    => __('Deals Page link', 'WeSoftPress'),
+                'default'  => '#',
+            ),
+            array(
+                'id'       => 'contact-link',
+                'type'     => 'text',
+                'title'    => __('Contact Page link', 'WeSoftPress'),
+                'default'  => '#',
+            ),
             array(
                 'id'       => 'facebook-link',
                 'type'     => 'text',
@@ -108,11 +83,50 @@
                 'default'  => '#',
             ),
             array(
+                'id'       => 'telegram-link',
+                'type'     => 'text',
+                'title'    => __('Telegram Channel link', 'WeSoftPress'),
+                'default'  => '#',
+            ),
+            array(
                 'id'       => 'rss-link',
                 'type'     => 'text',
                 'title'    => __('RSS link', 'WeSoftPress'),
                 'default'  => '#',
             )
+        )
+    ));
+
+    Redux::setSection($opt_name, array(
+        'title' => __('header Settings', 'WeSoftPress'),
+        'id'    => 'header',
+        'icon'  => 'el el-list-alt',
+    ));
+    Redux::setSection($opt_name, array(
+        'title' => __('Logo Settings'),
+        'id'    => 'header-logo_setting',
+        'icon'  => 'el el-list-alt',
+        'subsection'       => true,
+        'fields'     => array(
+            array(
+                'id'       => 'logo',
+                'title'    => __('Main Logo'),
+                'type'     => 'media',
+            ),
+            array(
+                'id'     => 'logo-width',
+                'title'    => __('width for logo'),
+                'type'   => 'text',
+                'placeholder' => 'defult is 330',
+                'default'  => '330',
+            ),
+            array(
+                'id'     => 'logo-height',
+                'title'    => __('height for logo'),
+                'type'   => 'text',
+                'placeholder' => 'defult is 60',
+                'default'  => '60',
+            ),
         )
     ));
     
@@ -293,35 +307,13 @@
         'title' => __('Footer Settings', 'WeSoftPress'),
         'id'    => 'footer',
         'icon'  => 'el el-list-alt',
-    ));
-    Redux::setSection($opt_name, array(
-        'title' => __('Logo Settings'),
-        'id'    => 'footer-footer_logo_setting',
-        'icon'  => 'el el-list-alt',
-        'subsection'       => true,
         'fields'     => array(
             array(
-                'id'       => 'publiser',
+                'id'       => 'copyright',
                 'type'     => 'editor',
-                'title'    => __('publiser Details', 'WeSoftPress'),
-                'subtitle' => __('Use any of the features of WordPress editor inside your panel!', 'WeSoftPress'),
-                'default'  => 'সম্পাদক ও প্রকাশক: নাজমুল হক শ্যামল',
+                'title'    => __('Copyright Details', 'WeSoftPress'),
+                'default'  => '&#169; Yellow News, 2022. All Rights Reserved.',
             ),
-            array(
-                'id'       => 'info',
-                'type'     => 'editor',
-                'title'    => __('Details', 'WeSoftPress'),
-                'subtitle' => __('Use any of the features of WordPress editor inside your panel!', 'WeSoftPress'),
-                'default'  => 'দৈনিক নতুন সময়, বাড়ি ৭/১, রোড ১, পল্লবী, মিরপুর ১২, ঢাকা- ১২১৬</br>
-                ফোন: ৫৮৩১২৮৮৮, 01889363531, ইমেইল: ronytarafder99@gmail.com',
-            ),
-            array(
-                'id'       => 'developer',
-                'type'     => 'editor',
-                'title'    => __('Developer', 'WeSoftPress'),
-                'subtitle' => __('Use any of the features of WordPress editor inside your panel!', 'WeSoftPress'),
-                'default'  => '<a href="https://wesoftpress.com/">Developed & Maintainance by WeSoftPress</a>',
-            )
         )
     ));
     

@@ -41,18 +41,13 @@ if (file_exists( WESOFTPRESS_ROOT .'/inc/custom-functions.php' )) {
 }
 
 
-
-require_once('inc/Options.php'); 
-
-add_filter('next_posts_link_attributes', 'add_next_posts_link_attributes');
-add_filter('previous_posts_link_attributes', 'add_previous_posts_link_attributes');
-
-function add_next_posts_link_attributes() {
-  return 'class="blog-pager-older-link-mobile"';
+/*--------------------------------------
+	Options
+----------------------------------------*/
+if (file_exists(WESOFTPRESS_ROOT . '/inc/Options.php')) {
+	require_once(WESOFTPRESS_ROOT . '/inc/Options.php');
 }
-function add_previous_posts_link_attributes() {
-  return 'class="blog-pager-newer-link-mobile"';
-}
+
 
 /*--------------------------------------
 	PHOTO GALLERY .

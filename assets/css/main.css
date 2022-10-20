@@ -731,7 +731,7 @@ div.resize-and-crop img {
     height: 60px;
     line-height: 60px
 }
-
+.logo-box a{font-size: 36px;color: #fff;font-weight: 600;}
 .sub-button {
     font-weight: 500;
     color: #4a380e !important;
@@ -760,7 +760,8 @@ div.resize-and-crop img {
 
 .logo-box img {
     max-width: 425px;
-    max-height: 70px;
+    max-height: 45px;
+    width: auto;
     display: inline-block;
     vertical-align: middle
 }
@@ -1437,8 +1438,8 @@ div.resize-and-crop img {
     font-weight: 500
 }
 
-.comments {
-    display: none
+.content.section .fb-comments {
+    display: none !important
 }
 
 .comment-box {
@@ -1982,6 +1983,9 @@ footer {
 }
 
 @media only screen and (min-width:730px) {
+    .logo-box img{
+        max-height: 70px;
+    }
     .menu-box {
         display: block
     }

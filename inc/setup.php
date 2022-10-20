@@ -36,6 +36,11 @@ if ( ! function_exists( 'wesoftpress_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
         register_nav_menus(array(
             'header_menu' => 'Header Menu',
+            'header_resources_menu' => 'Header Resources Menu',
+            'header_about_menu' => 'Header About Menu',
+            'footer_about_menu' => 'Footer About Menu',
+            'footer_pages_menu' => 'Footer Pages Menu',
+            'footer_deals_menu' => 'Footer Deals Menu',
         ));
 
 		/*

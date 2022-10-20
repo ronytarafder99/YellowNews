@@ -4,8 +4,7 @@ global $wesoftpress; ?>
 
 <main class='main clear'>
   <div class='main-box clear'>
-    <h1 class='story-title-all'>The Hacker News - Most Trusted Cyber Security and Computer Security Analysis: data
-      breach</h1>
+    <h1 class='story-title-all'><?php echo wp_get_document_title(); ?></h1>
     <div class='main-left-right clear'>
       <div class='left-box'>
         <div class='content section' id='content'>

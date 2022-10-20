@@ -49,10 +49,13 @@ if ( !function_exists('wesoftpress_scripts') ) :
             ALL JQUERY SCRIPTS HERE
         **************************************/
         
-        wp_enqueue_script('script', WESOFTPRESS_ROOT_JS . '/script.js', array('jquery'), null, true);
-        wp_enqueue_script('script_lightbox', WESOFTPRESS_ROOT_JS . '/jquery.lightbox.js', array('jquery'), null, true);
-        wp_enqueue_script('script_flexslider', WESOFTPRESS_ROOT_JS . '/jquery.flexslider.js', array('jquery'), null, true);
+        // wp_enqueue_script('script', WESOFTPRESS_ROOT_JS . '/script.js', array('jquery'), null, true);
+        // wp_enqueue_script('script_lightbox', WESOFTPRESS_ROOT_JS . '/jquery.lightbox.js', array('jquery'), null, true);
+        // wp_enqueue_script('script_flexslider', WESOFTPRESS_ROOT_JS . '/jquery.flexslider.js', array('jquery'), null, true);
 
+        if(is_single()){
+            wp_enqueue_script('social-share', WESOFTPRESS_ROOT_JS . '/social-share.js', array('jquery'), null, true);
+        }
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );

@@ -42,76 +42,96 @@
         <div class='footer-stuff clear cf'>
             <div class='footer-box-h4' id='follow-us'>Follow Us</div>
             <div class='follow-box cf'>
-                <div class='social-box s-tw'><a aria-label='twitter' href='https://twitter.com/thehackersnews'
+                <div class='social-box s-tw'>
+                    <a aria-label='twitter' href="<?php echo $wesoftpress['twitter-link'] ?>"
                         rel='noopener' target='_blank'><i class='icon-font icon-twitter'>&#61593;</i>
-                        <div class='sb-text'>850,500 Followers</div>
-                    </a></div>
-                <div class='social-box s-fb'><a aria-label='facebook' href='https://www.facebook.com/thehackernews'
+                        <!-- <div class='sb-text'>850,500 Followers</div> -->
+                    </a>
+                </div>
+                <div class='social-box s-fb'>
+                    <a aria-label='facebook' href="<?php echo $wesoftpress['facebook-link'] ?>"
                         rel='noopener' target='_blank'><i class='icon-font icon-facebook'>&#61594;</i>
-                        <div class='sb-text'>1,950,000 Followers</div>
-                    </a></div>
-                <div class='social-box s-in'><a aria-label='linkedin'
-                        href='https://www.linkedin.com/company/thehackernews/' rel='noopener' target='_blank'><i
+                        <!-- <div class='sb-text'>1,950,000 Followers</div> -->
+                    </a>
+                </div>
+                <div class='social-box s-in'>
+                    <a aria-label='linkedin'
+                        href="<?php echo $wesoftpress['linkedin-link'] ?>" rel='noopener' target='_blank'><i
                             class='icon-font icon-linkedin'>&#61665;</i>
-                        <div class='sb-text'>350,500 Followers</div>
-                    </a></div>
-                <div class='social-box s-yt'><a aria-label='youtube'
-                        href='https://www.youtube.com/c/thehackernews?sub_confirmation=1' rel='noopener'
+                        <!-- <div class='sb-text'>350,500 Followers</div> -->
+                    </a>
+                </div>
+                <div class='social-box s-yt'>
+                    <a aria-label='youtube'
+                        href="<?php echo $wesoftpress['Youtube-link'] ?>" rel='noopener'
                         target='_blank'><i class='icon-font icon-youtube'>&#61799;</i>
-                        <div class='sb-text'>19,900 Subscribers</div>
-                    </a></div>
-                <div class='social-box s-it'><a aria-label='instagram' href='https://www.instagram.com/thehackernews/'
+                        <!-- <div class='sb-text'>19,900 Subscribers</div> -->
+                    </a>
+                </div>
+                <div class='social-box s-it'>
+                    <a aria-label='instagram' href="<?php echo $wesoftpress['instagram-link'] ?>"
                         rel='noopener' target='_blank'><i class='icon-font icon-instagram'>&#61805;</i>
-                        <div class='sb-text'>140,500 Followers</div>
-                    </a></div>
+                        <!-- <div class='sb-text'>140,500 Followers</div> -->
+                    </a>
+                </div>
             </div>
             <nav class='f-menu-box cf'>
                 <div class='f-menu-cl-1 cf'>
                     <div class='footer-box-h5'>About</div>
                     <ul class='cf f-menu-list cf'>
-                        <li><a href='/p/about-us.html'>About Us</a></li>
-                        <li><a href='/p/advertising-with-hacker-news.html'>Advertising</a></li>
-                        <li><a href='/p/authors.html'>Editorial Team</a></li>
-                        <li><a href='/p/submit-news.html'>Contact</a></li>
+                        <?php $footer_about_menu = 'footer_about_menu';
+                        if (has_nav_menu($footer_about_menu)) {
+                            wp_nav_menu(array(
+                                'theme_location' => 'footer_about_menu',
+                                'container'       => false,
+                                'items_wrap' => '%3$s',
+                                'depth'           => 1,
+                            ));
+                        }; ?>
+
                     </ul>
                 </div>
                 <div class='f-menu-cl-2 cf'>
                     <div class='footer-box-h5'>Pages</div>
                     <ul class='cf f-menu-list cf'>
-                        <li><a href='https://feeds.feedburner.com/TheHackersNews' rel='noopener' target='_blank'>RSS
-                                Feeds</a></li>
-                        <li><a href='https://deals.thehackernews.com' rel='noopener' target='_blank'>Deals Store</a>
-                        </li>
-                        <li><a href='/p/privacy-policy.html'>Privacy Policy</a></li>
-                        <li><a href='/p/careers-technical-writer-designer-and.html'>Jobs</a></li>
+                        <?php $footer_pages_menu = 'footer_pages_menu';
+                        if (has_nav_menu($footer_pages_menu)) {
+                            wp_nav_menu(array(
+                                'theme_location' => 'footer_pages_menu',
+                                'container'       => false,
+                                'items_wrap' => '%3$s',
+                                'depth'           => 1,
+                            ));
+                        }; ?>
                     </ul>
                 </div>
                 <div class='f-menu-cl-3 cf'>
                     <div class='footer-box-h5'>Deals</div>
                     <ul class='cf f-menu-list cf'>
-                        <li><a href='https://deals.thehackernews.com/collections/citizengoods-exclusives' rel='noopener'
-                                target='_blank'>Exclusives</a></li>
-                        <li><a href='https://deals.thehackernews.com/collections/hacking' rel='noopener'
-                                target='_blank'>Hacking</a></li>
-                        <li><a href='https://deals.thehackernews.com/collections/shop-by-specialization-developer'
-                                rel='noopener' target='_blank'>Development</a></li>
-                        <li><a href='https://deals.thehackernews.com/collections/shop-by-interest-android'
-                                rel='noopener' target='_blank'>Android</a></li>
+                        <?php $footer_deals_menu = 'footer_deals_menu';
+                        if (has_nav_menu($footer_deals_menu)) {
+                            wp_nav_menu(array(
+                                'theme_location' => 'footer_deals_menu',
+                                'container'       => false,
+                                'items_wrap' => '%3$s',
+                                'depth'           => 1,
+                            ));
+                        }; ?>
                     </ul>
                 </div>
                 <div class='f-menu-cl-4 cf'>
-                    <a class='f-m-b' href='https://feeds.feedburner.com/TheHackersNews' rel='noopener' target='_blank'>
+                    <a class='f-m-b' href="<?php echo $wesoftpress['rss-link'] ?>" rel='noopener' target='_blank'>
                         <div class='f-menu-bt'><i class='icon-font icon-rss'>&#61598;</i> RSS Feeds</div>
                     </a>
-                    <a class='f-m-b' href='/p/submit-news.html'>
+                    <a class='f-m-b' href="<?php echo $wesoftpress['contact-link'] ?>">
                         <div class='f-menu-bt'><i class='icon-font icon-mail-alt'>&#61664;</i> Contact Us</div>
                     </a>
-                    <a class='f-m-b' href='https://t.me/joinchat/AAAAADwuDObFWF60CiR-HQ' rel='noopener' target='_blank'>
+                    <a class='f-m-b' href="<?php echo $wesoftpress['telegram-link'] ?>" rel='noopener' target='_blank'>
                         <div class='f-menu-bt'><i class='icon-font icon-telegram'>&#62150;</i> Telegram Channel</div>
                     </a>
                 </div>
             </nav>
-            <div class='footer-note cf'>&#169; The Hacker News, 2022. All Rights Reserved.</div>
+            <div class='footer-note cf'><?php echo $wesoftpress['copyright'] ?></div>
         </div>
     </div>
 </footer>
@@ -132,11 +152,11 @@ head.ready(document,function(){head.load({jqueryfile:"https://cdnjs.cloudflare.c
 //]]>
 </script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     //<![CDATA[
     head.ready("jqueryfile", function () { $(window).scroll(function () { var e = $(this).scrollTop(), s = $(".articlebody").offset().top, i = $(".stophere").offset().top; jQuery(window).height(); e < s ? ($(".float-share").css("visibility", "visible"), $(".float-share").removeClass("fixed-r")) : s < e && e < i - 440 ? ($(".float-share").addClass("fixed-r"), $(".float-share").css("visibility", "visible")) : ($(".float-share").css("visibility", "hidden"), $(".float-share").removeClass("fixed-r")) }) });
 //]]>
-  </script>
+  </script> -->
 
 <script type='application/ld+json'>
                 {
