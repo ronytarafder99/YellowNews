@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (Not Found).
  * @package yellow_news
- * by ThemeTags
+ * by WeSoftPress
  */
 global $wesoftpress;
 get_header(); ?>
