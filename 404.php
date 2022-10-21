@@ -1,9 +1,15 @@
-<?php global $wesoftpress;
+<?php
+/**
+ * The template for displaying 404 pages (Not Found).
+ * @package yellow_news
+ * by ThemeTags
+ */
+global $wesoftpress;
 get_header(); ?>
 
 <main class='main clear'>
     <div class='main-box clear'>
-        <a class='cf error_css' href='/'>
+        <a class='cf error_css' href="<?php bloginfo('url'); ?>">
             <img alt='Error Page' decoding='async' loading='lazy'
                 src="<?php echo WESOFTPRESS_ROOT_IMG ?>/404.png" /></a>
         <h1 class='story-title-all'><?php echo wp_get_document_title(); ?></h1>

@@ -144,6 +144,25 @@
                 'title'    => __('Home Sidebar Cat nine', 'WeSoftPress'),
                 'default'  => '1',
             ),
+            array(
+                'id'       => 'newslatter_shortcode',
+                'type'     => 'text',
+                'title'    => __('Newslatter ShortCode', 'WeSoftPress'),
+                'placeholder'    => __('[email-subscribers-form id="1"]', 'WeSoftPress'),
+                'subtitle' => __('you will find Shortcode "Email Subscribers" menu in lefthand side in WP menu then go to forms. copy the short code and paste here.', 'WeSoftPress'),
+            ),
+            array(
+                'id'       => 'newslatter_title',
+                'type'     => 'text',
+                'title'    => __('Newslatter Title', 'WeSoftPress'),
+                'default'  => 'Newsletter — Stay Informed',
+            ),
+            array(
+                'id'       => 'newslatter_para',
+                'type'     => 'textarea',
+                'title'    => __('Newslatter Title', 'WeSoftPress'),
+                'default'  => 'Sign up for cybersecurity newsletter and get latest news updates delivered straight to your inbox daily.',
+            ),
         )
     ));
     
@@ -183,92 +202,6 @@
         )
     ));
     
-    // Static Text Heading
-    Redux::setSection($opt_name, array(
-        'title'            => __('Text Heading Field', 'WeSoftPress'),
-        'desc'             => __('Please fill all the links here ', 'WeSoftPress'),
-        'id'               => 'Text_heading',
-        'icon'  => 'el el-list-alt',
-        'fields'           => array(
-            array(
-                'id'       => 'latest_only',
-                'type'     => 'text',
-                'title'    => __('Heading For Leatest', 'WeSoftPress'),
-                'desc'     => __('Demo: সর্বশেষ', 'WeSoftPress'),
-                'default'  => 'সর্বশেষ',
-            ),
-            array(
-                'id'       => 'most_read',
-                'type'     => 'text',
-                'title'    => __('Hading For Most Read', 'WeSoftPress'),
-                'desc'     => __('Demo: সর্বোচ্চ পঠিত', 'WeSoftPress'),
-                'default'  => 'সর্বোচ্চ পঠিত',
-            ),
-            array(
-                'id'       => 'latest_all_news',
-                'type'     => 'text',
-                'title'    => __('Hading For All Latest', 'WeSoftPress'),
-                'desc'     => __('Demo: সর্বশেষ সব খবর...', 'WeSoftPress'),
-                'default'  => 'সর্বশেষ সব খবর...',
-            ),
-            array(
-                'id'       => 'publised_at',
-                'type'     => 'text',
-                'title'    => __('Hading For publised', 'WeSoftPress'),
-                'desc'     => __('Demo: প্রকাশিত :', 'WeSoftPress'),
-                'default'  => 'প্রকাশিত :',
-            ),
-            array(
-                'id'       => 'pre_post',
-                'type'     => 'text',
-                'title'    => __('Hading For Previous Post', 'WeSoftPress'),
-                'desc'     => __('Demo: পূর্ববর্তী সংবাদ', 'WeSoftPress'),
-                'default'  => 'পূর্ববর্তী সংবাদ',
-            ),
-            array(
-                'id'       => 'nxt_post',
-                'type'     => 'text',
-                'title'    => __('Hading For Next Post', 'WeSoftPress'),
-                'desc'     => __('Demo: পরবর্তী সংবাদ', 'WeSoftPress'),
-                'default'  => 'পরবর্তী সংবাদ',
-            ),
-            array(
-                'id'       => '_pg_prv_post',
-                'type'     => 'text',
-                'title'    => __('Hading For Pagination Previous', 'WeSoftPress'),
-                'desc'     => __('Demo: << পূর্ববর্তী ', 'WeSoftPress'),
-                'default'  => '<< পূর্ববর্তী',
-            ),
-            array(
-                'id'       => '_pg_nxt_post',
-                'type'     => 'text',
-                'title'    => __('Hading For Pagination Next', 'WeSoftPress'),
-                'desc'     => __('Demo: পরবর্তী >>', 'WeSoftPress'),
-                'default'  => 'পরবর্তী >>',
-            ),
-            array(
-                'id'       => 'all_page_hd',
-                'type'     => 'text',
-                'title'    => __('Hading For All Page', 'WeSoftPress'),
-                'desc'     => __('Demo: সকল পাতা', 'WeSoftPress'),
-                'default'  => 'সকল পাতা',
-            ),
-            array(
-                'id'       => 'home_heading',
-                'type'     => 'text',
-                'title'    => __('Home Heading Text', 'WeSoftPress'),
-                'desc'     => __('Demo: প্রচ্ছদ', 'WeSoftPress'),
-                'default'  => 'প্রচ্ছদ',
-            ),
-            array(
-                'id'       => 'search_heading',
-                'type'     => 'text',
-                'title'    => __('Heading Text Search', 'WeSoftPress'),
-                'desc'     => __('Demo: অনুসন্ধান', 'WeSoftPress'),
-                'default'  => 'অনুসন্ধান',
-            ),
-        )
-    ));
     // advertisement
     Redux::setSection($opt_name, array(
         'title' => __('Advertisements', 'WeSoftPress'),
@@ -279,25 +212,13 @@
                 'id'       => 'header_ad',
                 'type'     => 'editor',
                 'title'    => __('Ads In The Header', 'WeSoftPress'),
-                'subtitle' => __('This ad will show in Sidebar', 'WeSoftPress'),
+                'subtitle' => __('This ad will show in Header Bottom', 'WeSoftPress'),
             ),
             array(
-                'id'       => 'archive_ad_one',
+                'id'       => 'home_ad',
                 'type'     => 'editor',
-                'title'    => __('Ads In The Sidebar', 'WeSoftPress'),
-                'subtitle' => __('This ad will show in Sidebar', 'WeSoftPress'),
-            ),
-            array(
-                'id'       => 'archive_ad_two',
-                'type'     => 'editor',
-                'title'    => __('Ads In The Sidebar', 'WeSoftPress'),
-                'subtitle' => __('This ad will show in Sidebar', 'WeSoftPress'),
-            ),
-            array(
-                'id'       => 'archive_ad_three',
-                'type'     => 'editor',
-                'title'    => __('Ads In The Sidebar', 'WeSoftPress'),
-                'subtitle' => __('This ad will show in Sidebar', 'WeSoftPress'),
+                'title'    => __('Ads In The Homepage', 'WeSoftPress'),
+                'subtitle' => __('This ad will show in Homepage Bottom', 'WeSoftPress'),
             ),
         )
     ));
@@ -328,7 +249,7 @@
     Redux::setSection($opt_name, array(
         'title' => __('Support', 'WeSoftPress'),
         'id'    => 'support',
-        'desc'       => __('If you need help about this theme, You can call: 01957244612</br> Facebook: ', 'WeSoftPress') . '<a href="https://www.facebook.com/ronytarafder99" target="_blank">  facebook</a>',
+        'desc'       => __('If you need help about this theme, You can call: 01889363531</br> Facebook: ', 'WeSoftPress') . '<a href="https://www.facebook.com/ronytarafder99" target="_blank">  facebook</a>',
         'subtitle' => __('No validation can be done on this field type', 'WeSoftPress'),
         'icon'  => 'el el-thumbs-up',
     ));

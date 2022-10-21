@@ -6,7 +6,7 @@
                 if (has_post_thumbnail()) {
                     the_post_thumbnail( 'thumbnail', array( 'class' => 'lazyload' ) );
                 } else { 
-                    echo '<img class="lazyload" src="'.WESOFTPRESS_ROOT_IMG.'/default-img_final.gif" alt="Failed to img load" />';
+                    echo '<img class="lazyload" src="'.WESOFTPRESS_ROOT_IMG.'/no-image.gif" alt="Failed to img load" />';
                 } ?>
             </figure>
         </div>

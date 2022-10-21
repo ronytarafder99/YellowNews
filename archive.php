@@ -1,4 +1,18 @@
-<?php get_header(); 
+
+<?php
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package yellow_news
+ */
+get_header(); 
 global $wesoftpress; ?>
 <?php if (have_posts()) : ?>
 
@@ -15,27 +29,7 @@ global $wesoftpress; ?>
               endwhile; ?>
             </div>
             <div class='blog-pager clear' id='blog-pager'>
-              <!-- <?php 
-              $next_posts_link =  get_next_posts_link( 'Older posts' );
-              $previous_posts_link = get_previous_posts_link( 'Newer posts' ); 
-              if($previous_posts_link){ ?>
-              <span id="blog-pager-newer-link">
-                <a class="blog-pager-newer-link-mobile"
-                  href="https://thehackernews.com/search/label/data%20breach?max-results=20"
-                  id="Blog1_blog-pager-newer-link" title="Newer Posts"><i class="icon-font icon-left-open"></i> Prev
-                  Page</a>
-              </span>
-              <?php } ?>
-
-              <?php if($next_posts_link){ ?>
-              <span id="blog-pager-older-link">
-                <a class="blog-pager-older-link-mobile" href="<?php $next_posts_link; ?>"
-                  id="Blog1_blog-pager-older-link" title="Older Posts"> Next Page <i
-                    class="icon-font icon-right-open">&#59398;</i></a>
-              </span>
-              <?php } ?> -->
-
-
+     
               <span id="blog-pager-newer-link">
               <?php previous_posts_link( '<i class="icon-font icon-left-open"></i> Prev Page' ); ?>
               </span>
@@ -43,9 +37,6 @@ global $wesoftpress; ?>
               <span id="blog-pager-older-link">
               <?php next_posts_link( 'Next Page <i class="icon-font icon-right-open">&#59398;</i>' ); ?>
               </span>
-
-
-
 
             </div>
             <div class='clear'></div>
@@ -58,6 +49,10 @@ global $wesoftpress; ?>
     </div>
   </div>
 </main>
+
+<?php if($wesoftpress['home_ad']){
+    echo '<div class="clear advertisements-box"><div class="main-box main-left-right">'.$wesoftpress['home_ad'].'</div></div>';
+}; ?>
 
 <?php else :
   echo '<h2 style="text-align:center; font-size:2rem; margin:20px 0; font-weight:normal;">Nothing hare</h2>';

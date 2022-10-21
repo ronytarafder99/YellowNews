@@ -6,13 +6,13 @@
 function wesoftpress_import_files() {
     return array(
         array(
-            'import_file_name'           => 'NewTime Theme Demo Data',
+            'import_file_name'           => 'yellownews Theme Demo Data',
             'import_file_url'            => WESOFTPRESS_ROOT_URI . '/dummy-data/content/NewTime.xml',
             'import_widget_file_url'     => WESOFTPRESS_ROOT_URI . '/dummy-data/content/NewTime.wie',
             'import_customizer_file_url' => WESOFTPRESS_ROOT_URI . '/dummy-data/content/NewTime.dat',
             'import_preview_image_url'   => get_stylesheet_directory_uri() . '/screenshot.png',
             'import_notice'              => esc_html__( 'Make sure all the required plugins are activated.', 'wesoftpress' ),
-            'preview_url'                => 'https://demo.wesoftpress.com/newtime',
+            'preview_url'                => 'https://demo.wesoftpress.com/yellownews/',
         ),
     );
 }

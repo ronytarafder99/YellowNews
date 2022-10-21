@@ -52,6 +52,6 @@ if (file_exists(WESOFTPRESS_ROOT . '/inc/update-checker.php')) {
 }
 
 new ThemeUpdateChecker(
-    'NewTime', 
-    'https://wesoftpress.com/my-theme-update/NewTime/info.json'
+    'YellowNews', 
+    'https://cdn.wesoftpress.com/my-theme-update/YellowNews/info.json'
 );

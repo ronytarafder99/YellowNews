@@ -62,14 +62,6 @@
         </div>
         <div class='menu-box cf'>
             <ul class='cf menu-ul'>
-                <!-- <li class='show-menu'><a href="<?php bloginfo('url'); ?>" itemprop='url'>Home</a></li>
-                <li class='eight_plus'><a href='/search/label/data%20breach'>Data Breaches</a></li>
-                <li class='show-menu'><a href='/search/label/Cyber%20Attack'>Cyber Attacks</a></li>
-                <li class='show-menu'><a href='/search/label/Vulnerability'>Vulnerabilities</a></li>
-                <li class='eight_plus'><a href='/search/label/Malware'>Malware</a></li>
-                <li class='show-menu'><a href='https://deals.thehackernews.com' rel='noopener'
-                        target='_blank'>Offers</a></li>
-                <li class='show-menu'><a href='/p/submit-news.html'>Contact</a></li> -->
                 <?php $header_menu = 'header_menu';
                 if (has_nav_menu($header_menu)) {
                     wp_nav_menu(array(
@@ -132,8 +124,7 @@
             <div class='o-contact'>
                 <a href="<?php echo $wesoftpress['contact-link'] ?>">
                     <div class='o-contact-icon'><i class='icon-font icon-mail-alt'>&#61664;</i></div>
-                    <span>Reach out to get featured&#8212;contact us to send your exclusive story idea, research, hacks,
-                        or ask us a question or leave a comment/feedback!</span>
+                    <span><?php bloginfo( 'description' ); ?></span>
                 </a>
             </div>
             <div class='gap'></div>
@@ -159,10 +150,9 @@
             </div>
         </div>
     </aside>
-    <div class='advertisements'>
-
+    <div class='advertisements main-box'>
         <?php if($wesoftpress['header_ad']){
-        echo '<center class="cf">'.$wesoftpress['header_ad'].'</center>';
-    }; ?>
+            echo '<center class="cf">'.$wesoftpress['header_ad'].'</center>';
+        }; ?>
 
     </div>

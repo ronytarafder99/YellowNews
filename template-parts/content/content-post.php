@@ -7,15 +7,15 @@
                 if (has_post_thumbnail()) {
                     the_post_thumbnail( 'custom-size', array( 'class' => 'home-img-src lazyload' ) );
                 } else { 
-                    echo '<img class="home-img-src lazyload" src="'.WESOFTPRESS_ROOT_IMG.'/default-img_final.gif" alt="Failed to img load" />';
+                    echo '<img class="home-img-src lazyload" src="'.WESOFTPRESS_ROOT_IMG.'/no-image.gif" alt="Failed to img load" />';
                 } ?>
             </div>
         </div>
         <div class='clear home-right'>
             <h2 class='home-title'><?php the_title(); ?></h2>
             <div class='item-label'><i
-                    class='icon-font icon-calendar'>&#59394;</i>October 18, 2022<span><i
-                        class='icon-font icon-user'>&#59396;</i>The Hacker News
+                    class='icon-font icon-calendar'>&#59394;</i><?php echo get_the_date('F j, Y'); ?><span><i
+                        class='icon-font icon-user'>&#59396;</i><?php echo get_the_author(); ?>
                 </span></div>
             <div class='home-desc'><?php custom_length_excerpt(20); ?></div>
         </div>

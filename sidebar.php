@@ -1,13 +1,28 @@
+<?php
+/**
+ * The sidebar containing the main widget area
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package yellow_news
+ */
+
+?>
 <?php global $wesoftpress; ?>
 
 <aside class='right-box'>
-    <?php if($wesoftpress['archive_ad_one']){
-        echo '<div class="clear advertisements-box">'.$wesoftpress['archive_ad_one'].'</div>';
-    }; ?>
 
-    <?php if($wesoftpress['archive_ad_two']){
-        echo '<div class="clear advertisements-box">'.$wesoftpress['archive_ad_two'].'</div>';
-    }; ?>
+    <?php if (is_active_sidebar('sidebar_widget_one')) :
+        echo '<div class="clear advertisements-box">';
+        dynamic_sidebar('sidebar_widget_one');
+        echo '</div>';
+    endif; ?>
+
+    <?php if (is_active_sidebar('sidebar_widget_two')) :
+        echo '<div class="clear advertisements-box">';
+        dynamic_sidebar('sidebar_widget_two');
+        echo '</div>';
+    endif; ?>
 
     <div class='clear section' id='sidebar'>
         <div class='widget PopularPosts' data-version='1' id='PopularPosts1'>
@@ -23,8 +38,10 @@
         </div>
     </div>
 
-    <?php if($wesoftpress['archive_ad_three']){
-        echo '<div class="clear advertisements-box">'.$wesoftpress['archive_ad_three'].'</div>';
-    }; ?>
-    
+    <?php if (is_active_sidebar('sidebar_widget_three')) :
+        echo '<div class="clear advertisements-box">';
+        dynamic_sidebar('sidebar_widget_three');
+        echo '</div>';
+    endif; ?>
+
 </aside>

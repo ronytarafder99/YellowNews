@@ -67,9 +67,10 @@ function wesoftpress_register_required_plugins() {
 		// 	'source'   => WESOFTPRESS_ROOT_PLUGINS . '/omnivuscore.zip',
 		// 	'required' => true,
 		// ),
+
 		array(
-			'name'     => esc_html__('ShareThis Share Buttons','wesoftpress'),
-			'slug'     => 'sharethis-share-buttons',
+			'name'     => esc_html__('Email Subscribers & Newsletters – Simple and Effective Email Marketing WordPress Plugin','wesoftpress'),
+			'slug'     => 'email-subscribers',
 			'required' => true,
 		),
 		array(

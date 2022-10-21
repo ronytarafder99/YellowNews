@@ -48,36 +48,6 @@ if (file_exists(WESOFTPRESS_ROOT . '/inc/Options.php')) {
 	require_once(WESOFTPRESS_ROOT . '/inc/Options.php');
 }
 
-
-/*--------------------------------------
-	PHOTO GALLERY .
-----------------------------------------*/
-if (file_exists(WESOFTPRESS_ROOT . '/inc/photogallery.php')) {
-	require_once(WESOFTPRESS_ROOT . '/inc/photogallery.php');
-}
-
-/*--------------------------------------
-	VIDEO GALLERY .
-----------------------------------------*/
-if (file_exists(WESOFTPRESS_ROOT . '/inc/videogallery.php')) {
-	require_once(WESOFTPRESS_ROOT . '/inc/videogallery.php');
-}
-
-/*--------------------------------------
-	ENGLISH TO BANGLA CONVATER .
-----------------------------------------*/
-if (file_exists(WESOFTPRESS_ROOT . '/inc/dateEngToBanglaConverter.php')) {
-	require_once(WESOFTPRESS_ROOT . '/inc/dateEngToBanglaConverter.php');
-}
-
-
-/*--------------------------------------
-	REWRITE URL .
-----------------------------------------*/
-if (file_exists(WESOFTPRESS_ROOT . '/inc/rewrite.php')) {
-	require_once(WESOFTPRESS_ROOT . '/inc/rewrite.php');
-}
-
 /*--------------------------------------
 	REQUIRED PLUGINS.
 ----------------------------------------*/

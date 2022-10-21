@@ -1,11 +1,11 @@
 <article class='latest cf'>
-    <a class='latest-link' href="<?php the_permalink(); ?>" rel='noopener' target='_blank'>
+    <a class='latest-link' href="<?php the_permalink(); ?>" rel='noopener'>
         <div>
             <?php 
             if (has_post_thumbnail()) {
                 the_post_thumbnail( 'custom-size', array( 'class' => 'lazyload deal-link' ) );
             } else {
-                echo '<img class="lazyload deal-link" src="'.WESOFTPRESS_ROOT_IMG.'/default-img_final.gif" alt="Failed to img load" />';
+                echo '<img class="lazyload deal-link" src="'.WESOFTPRESS_ROOT_IMG.'/no-image.gif" alt="Failed to img load" />';
             } ?>
         </div>
         <div>

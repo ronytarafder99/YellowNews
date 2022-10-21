@@ -1,11 +1,18 @@
-<?php get_header(); 
+<?php
+/**
+ * The template for displaying search results pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ *
+ * @package yellow_news
+ */
+get_header(); 
 global $wesoftpress; ?>
 <?php if (have_posts()) : ?>
 
 <main class='main clear'>
   <div class='main-box clear'>
-    <h1 class='story-title-all'>The Hacker News - Most Trusted Cyber Security and Computer Security Analysis: data
-      breach</h1>
+    <h1 class='story-title-all'><?php echo wp_get_document_title(); ?></h1>
     <div class='main-left-right clear'>
       <div class='left-box'>
         <div class='content section' id='content'>
@@ -41,6 +48,10 @@ global $wesoftpress; ?>
     </div>
   </div>
 </main>
+
+<?php if($wesoftpress['home_ad']){
+    echo '<div class="clear advertisements-box"><div class="main-box main-left-right">'.$wesoftpress['home_ad'].'</div></div>';
+}; ?>
 
 <?php else :
   echo '<h2 style="text-align:center; font-size:2rem; margin:20px 0; font-weight:normal;">No Content Matched</h2>';

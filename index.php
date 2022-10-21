@@ -1,4 +1,17 @@
-<?php global $wesoftpress;
+<?php
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package yellow_news
+ */
+global $wesoftpress;
 get_header(); ?>
 
 <main class='main clear'>
@@ -48,5 +61,9 @@ get_header(); ?>
         </div>
     </div>
 </main>
+
+<?php if($wesoftpress['home_ad']){
+    echo '<div class="clear advertisements-box"><div class="main-box main-left-right">'.$wesoftpress['home_ad'].'</div></div>';
+}; ?>
 
 <?php get_footer(); ?>
