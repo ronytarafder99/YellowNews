@@ -134,14 +134,14 @@
     Redux::setSection($opt_name, array(
         'title'  => __('Home Page Setting', 'WeSoftPress'),
         'id'     => 'home_page',
-        'desc'   => __('All Setting For Hime Page, visit: ', 'WeSoftPress') . '<a href="https://wesoftpress.com/" target="_blank">Theme Documentation</a>',
+        'desc'   => __('All Setting For Home Page, visit: ', 'WeSoftPress') . '<a href="https://wesoftpress.com/" target="_blank">Theme Documentation</a>',
         'icon'   => 'el el-list-alt',
         'fields' => array(
             array(
                 'id'       => 'post_cat_one',
                 'type'     => 'select',
                 'data'     => 'categories',
-                'title'    => __('Home Sidebar Cat nine', 'WeSoftPress'),
+                'title'    => __('Home Catgory One', 'WeSoftPress'),
                 'default'  => '1',
             ),
             array(

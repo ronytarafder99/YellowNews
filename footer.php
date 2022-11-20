@@ -11,8 +11,9 @@
 ?>
 <?php global $wesoftpress; ?>
 
-<?php $cat_id = $wesoftpress['post_cat_one']; ?>
-<?php $lastpost = new WP_Query('cat=' . $cat_id . ' & posts_per_page=4'); ?>
+<?php $cat_id = $wesoftpress['post_cat_one'];
+if($cat_id){
+$lastpost = new WP_Query('cat=' . $cat_id . ' & posts_per_page=4'); ?>
 <?php if ($lastpost->have_posts()) : ?>
 <div class='deals cf'>
     <div class='deal-box cf'>
@@ -28,7 +29,8 @@
         </div>
     </div>
 </div>
-<?php endif; ?>
+<?php endif; 
+} ?>
 
 <?php $newslatter_shortcode = $wesoftpress['newslatter_shortcode']; 
 if($newslatter_shortcode){ ?>
