@@ -35,12 +35,17 @@
         <div class='logo-area cf'>
             <div class='logo-box'>
                 <a href="<?php bloginfo('url'); ?>">
-                <?php if($wesoftpress['logo']['url']){
-                    echo '<img width="'.$wesoftpress['logo-width'].'" height="'.$wesoftpress['logo-height'].'" alt="Site Logo" src="'.$wesoftpress['logo']['url'].'" />';
-                }else{
-                    bloginfo('name');
-                }; ?>
-                    
+                    <?php if($wesoftpress['logo']){
+                        if($wesoftpress['logo']['url']){
+                            echo '<img width="'.$wesoftpress['logo-width'].'" height="'.$wesoftpress['logo-height'].'" alt="Site Logo" src="'.$wesoftpress['logo']['url'].'" />';
+                        }
+                        else{
+                            bloginfo('name');
+                        }
+                    }else{
+                        bloginfo('name');
+                    }; ?>
+
                 </a>
             </div>
             <div class='m-button m-menu-more'><a aria-label='open menu' class='btn-open' href='javascript:void(0)'><i
@@ -93,7 +98,7 @@
                 <div class='o-menu-left'>
                     <div class='o-menu-h5'>Resources</div>
                     <ul class='o-menu'>
-                    <?php $header_resources_menu = 'header_resources_menu';
+                        <?php $header_resources_menu = 'header_resources_menu';
                         if (has_nav_menu($header_resources_menu)) {
                             wp_nav_menu(array(
                                 'theme_location' => 'header_resources_menu',
@@ -107,7 +112,7 @@
                 <div class='o-menu-right'>
                     <div class='o-menu-h5'>About Site</div>
                     <ul class='o-menu'>
-                    <?php $header_about_menu = 'header_about_menu';
+                        <?php $header_about_menu = 'header_about_menu';
                         if (has_nav_menu($header_about_menu)) {
                             wp_nav_menu(array(
                                 'theme_location' => 'header_about_menu',
